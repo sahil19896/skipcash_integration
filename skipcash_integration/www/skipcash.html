@@ -1,0 +1,47 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("Payment Status") }}{% endblock %}
+
+{%- block page_content -%}
+<div class='page-card' style='max-width: 460px;'>
+
+	<main class="my-4 working">
+                <div class='page-card-head'>
+                        <span class='indicator green'>
+                                {{ _("SkipCash is working on your Payment...") }}</span>
+                </div>
+                <p>{{ _("Please stay on the page") }}</p>
+        </main>
+
+	<main class="my-4 success" style="display: none;">
+		<div class='page-card-head'>
+        	        <span class='indicator green'>
+        	                {{ _("Success") }}</span>
+        	</div>
+        	<p>{{ payment_message or _("Your payment was successfully accepted") }}</p>
+		<div id="info"></div>
+	</main>
+
+	<main class="my-4 failed" style="display: none;">
+                <div class='page-card-head'>
+                        <span class='indicator red'>
+                                {{ _("Failed") }}</span>
+                </div>
+                <p>{{ _("Your payment was failed.") }}</p>
+		<div id="failed_info"></div>
+        </main>
+</div>
+<style>
+{% include "templates/styles/card_style.css" %}
+</style>
+<script>
+        frappe.ready(function() {
+                if('{{ frappe.form_dict.redirect_to or "" }}'){
+                        setTimeout(function(){
+                                window.location.href = '{{ frappe.form_dict.redirect_to }}';
+                        }, 4000);
+                }
+        })
+</script>
+<script type="text/javascript" src="skipcash.js?ver={{ build_version }}"></script>
+{% endblock %}

@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-04 16:40:47.686367",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "url",
+  "client_id",
+  "key_id",
+  "key_secret"
+ ],
+ "fields": [
+  {
+   "default": "https://skipcashtest.azurewebsites.net/api/v1/payments/",
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "key_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Key ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "key_secret",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Key Secret",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-01-04 16:47:14.936880",
+ "modified_by": "Administrator",
+ "module": "Skipcash Integration",
+ "name": "SKIPCash Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

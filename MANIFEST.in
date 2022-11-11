@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include skipcash_integration *.css
+recursive-include skipcash_integration *.csv
+recursive-include skipcash_integration *.html
+recursive-include skipcash_integration *.ico
+recursive-include skipcash_integration *.js
+recursive-include skipcash_integration *.json
+recursive-include skipcash_integration *.md
+recursive-include skipcash_integration *.png
+recursive-include skipcash_integration *.py
+recursive-include skipcash_integration *.svg
+recursive-include skipcash_integration *.txt
+recursive-exclude skipcash_integration *.pyc
